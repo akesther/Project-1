@@ -1,0 +1,134 @@
+* {
+  border: 0px;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  /* padding: 1em; */
+}
+/* div{
+    border: 1px solid red;
+    margin: 2px;
+} */
+head {
+  display: flex;
+  align-items: center;
+}
+main {
+  margin: 1%;
+  text-align: center;
+}
+footer {
+  display: flex;
+  align-items: center;
+}
+img {
+  height: 15%;
+  width: 15%;
+}
+
+.card {
+  max-width: 30em;
+}
+
+.cardImg {
+  width: 75%;
+  height: 50%;
+  /* max-width: 25%; */
+  margin: auto;
+  padding: 0.5em;
+}
+
+.card-title {
+  text-align: left;
+  /* font-size: large; */
+  font-weight: bolder;
+  margin-bottom: 2px;
+  /* border: 1px solid rgb(5, 55, 17);
+  background-color: rgb(128, 207, 150); */
+}
+
+.card-text  {
+    margin-top: 3%;
+  font-size: small;
+  text-align: left;
+  line-height: 25%;
+}
+
+.borderCt-div {
+  font-size: small;
+ 
+}
+.Contries-borders {
+  text-align: left;
+  /* background-color: yellow; */
+  margin: 10px 5px 5px 1px;
+}
+.CImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+
+
+/* Styling for the grid container */
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 equal-width columns */
+    gap: 20px;
+    padding: 20px;
+  
+}
+
+/* Styling for each country item */
+.country-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Styling for country flag images */
+.country-flag {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Styling for country name */
+.country-name {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1200px) {
+    .countries-grid {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns on medium screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .countries-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on small screens */
+    }
+}
+
+@media (max-width: 250px) {
+    .countries-grid {
+        grid-template-columns: 1fr;  /* 1 column on very small screens */
+    }
+}
+
+.card-img-top {
+    width: 100%;      
+    height: 150px;    
+    object-fit: cover; 
+}
+
