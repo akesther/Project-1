@@ -1,0 +1,115 @@
+* {
+  border: 0px;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  /* background-color: #501313; */
+  margin: 2%;
+  padding: 1%;
+}
+/* div{
+    border: 1px solid red;
+    margin: 2px;
+} */
+head {
+  display: flex;
+  align-items: center;
+}
+main {
+  margin: 1%;
+  text-align: center;
+  /* background-color: lab(80.84% -47.3 14.51 / 0.121); */
+  padding: 3%;
+}
+
+.countryCard {
+  max-width: 60em;
+  /* background-color: rgb(115, 115, 12); */
+  padding-bottom: 8%;
+  margin: auto;
+}
+
+.CImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  /* height: 100vh; */
+}
+.cardTitle {
+  text-align: left;
+  font-size: medium;
+  font-weight: bolder;
+  margin: 7% 0% 5% 0%;
+  padding: 2% 0% 5% 2%;
+  /* background-color: rgb(128, 207, 150); */
+  /* color: red; */
+  /* font-style: italic; */
+  /* border: 1px solid rgb(5, 55, 17);
+  background-color: rgb(128, 207, 150); */
+}
+.card-text {
+  margin-top: 5%;
+  /* margin-bottom: 15%; */
+  font-size: small;
+  text-align: left;
+  line-height: 35%;
+  font-weight: lighter;
+}
+
+.ContriesBorders {
+  text-align: left;
+  /* background-color: yellow; */
+  margin: 2% 5px 5px 5%;
+  /* text-decoration: none; */
+}
+.CBody {
+  margin: 2% 0% 5% 0%;
+  padding: 5% 2% 5% 2%;
+  /* background-color: rgb(247, 182, 182); */
+}
+
+
+/*  */
+
+
+/* :root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f5f5f5;
+  --border-color: #cccccc;
+} */
+
+/* Dark mode colors for manual toggle */
+[data-theme="dark"] {
+  --bg-color: rgb(112, 121, 129);
+  --text-color: #ffffff;
+  /* --card-bg: #501313; */
+  /* --border-color: #444444; */
+}
+
+/* Dark mode colors for system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+  }
+}
+
+/* Apply the variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.card {
+  /* background-color: var(--card-bg); */
+  /* border: 1px solid var(--border-color); */
+}
+
