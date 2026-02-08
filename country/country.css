@@ -85,8 +85,12 @@ main {
 [data-theme="dark"] {
   --bg-color: rgb(112, 121, 129);
   --text-color: #ffffff;
-  /* --card-bg: #501313; */
-  /* --border-color: #444444; */
+  .topView{
+    border: 1px solid rgba(135, 144, 162, 0.525);
+    background-color: rgb(124, 124, 144);
+  }
+  /* --card-bg: #501313;
+  --border-color: #444444; */
 }
 
 /* Dark mode colors for system preference */

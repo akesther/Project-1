@@ -14,9 +14,9 @@ head {
   display: flex;
   align-items: center;
 }
-.topView{
+/* .topViewC{
   border: 1px solid #000000;
-}
+} */
 main {
   margin: 1%;
   text-align: center;
@@ -152,6 +152,9 @@ img {
   .card {
     color: white;
   }
+  /* .topViewC {
+    border: 1px solid #000000;
+  } */
 }
 
 /* Dark mode colors for system preference */
