@@ -4,14 +4,10 @@
   padding: 0%;
 }
 body {
-  /* background-color: #501313; */
   margin: 2%;
   padding: 1%;
 }
-/* div{
-    border: 1px solid red;
-    margin: 2px;
-} */
+ 
 head {
   display: flex;
   align-items: center;
@@ -112,8 +108,5 @@ body {
     color 0.3s ease;
 }
 
-.card {
-  /* background-color: var(--card-bg); */
-  /* border: 1px solid var(--border-color); */
-}
+ 
 

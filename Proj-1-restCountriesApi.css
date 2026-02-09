@@ -4,12 +4,8 @@
   padding: 0%;
 }
 body {
-  /* padding: 1em; */
 }
-/* div{
-    border: 1px solid red;
-    margin: 2px;
-} */
+
 head {
   display: flex;
   align-items: center;
@@ -51,10 +47,7 @@ img {
   font-size: medium;
   font-weight: bolder;
   margin-bottom: 25px;
-  /* color: red; */
-  /* font-style: italic; */
-  /* border: 1px solid rgb(5, 55, 17);
-  background-color: rgb(128, 207, 150); */
+ 
 }
 
 .card-text {

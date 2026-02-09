@@ -8,12 +8,7 @@ const countryName = params.get("name");
 
 console.log("++++++++++Country Name from URL:", countryName);
 
-//   // Get the parameters from the URL
-//   const flagUrl = params.get("flags");
-//     console.log("Country flag from URL -------------------", flagUrl);
-// Display the data
-// document.getElementById("countryName").textContent = countryName;
-//   document.getElementById("countryImgId").src = flagUrl;
+
 
 // fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(countryName)}`);
 
