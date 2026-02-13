@@ -98,7 +98,7 @@ const setTheme = (theme) => {
 
   // Update button text
   themeToggle.textContent =
-    theme === "dark" ? "☀️ Light Mode" : "🌙 Darkkk Mode";
+    theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode";
 };
 
 // Initialize theme
