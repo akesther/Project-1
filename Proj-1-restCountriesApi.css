@@ -44,7 +44,7 @@ img {
 
 .card-title {
   text-align: left;
-  font-size: medium;
+  font-size: 75%;
   font-weight: bolder;
   margin-bottom: 25px;
  
@@ -53,7 +53,7 @@ img {
 .card-text {
   margin-top: 5%;
   /* margin-bottom: 15%; */
-  font-size: small;
+  font-size: 70%;
   text-align: left;
   line-height: 30%;
 }
@@ -88,10 +88,10 @@ img {
 
 /* Styling for country name */
 .country-name {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  /* display: block; */
+  /* margin-top: 10px; */
+  /* font-size: 1.2rem; */
+  /* font-weight: bold; */
 }
 
 @media (max-width: 1200px) {

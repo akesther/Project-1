@@ -1,5 +1,6 @@
 const countriesList = document.getElementById("countriesList");
 const cardImgTop = document.getElementById("cardImgTop");
+const filterRegion = document.getElementById("filterRegion");
 
 export class NetworkError extends Error {
   //  class NetworkError extends Error {
@@ -45,6 +46,7 @@ function displayCountries(countries) {
   countries.forEach((country) => {
     // Create the card container
     const div = document.createElement("div");
+    const option = document.createElement("option");
     div.classList.add("col-md-3", "mb-4"); // This ensures the cards will be responsive with 4 columns
 
     // Create the card HTML structure
@@ -64,8 +66,11 @@ function displayCountries(countries) {
             </div>
         `;
 
+    // option.innerHTML = `<option >${country.region}</option>`;
+
     // Append the created card to the grid
     countriesGrid.appendChild(div);
+    filterRegion.appendChild(option);
   });
 
   countries.forEach((element) => {
@@ -73,47 +78,35 @@ function displayCountries(countries) {
   });
 }
 
-
-
-// console.log(` ------------- ${countriesList.value} -------------- `);
-
-// cardImgTop.addEventListener("click", (event) => {
-//   console.log("Card image clicked:", event.target);
-//   const name = document.getElementById("cardImgTop").value;
-//   window.location.href = `country.html?name=${encodeURIComponent(name)}`;
-// });
-
-// const countryDtlName = document.getElementById("cardImgTop").dataset.country;
-// localStorage.setItem("countryName", countryDtlName);
-// window.location.href = `country.html?name=${encodeURIComponent(countryDtlName)}`;
-// Toggle dark mode
-// Get the toggle button
-const themeToggle = document.getElementById('themeToggle');
+const themeToggle = document.getElementById("themeToggle");
 
 // Check for saved theme preference or default to system preference
 const getPreferredTheme = () => {
-  const savedTheme = localStorage.getItem('theme');
+  const savedTheme = localStorage.getItem("theme");
   if (savedTheme) {
     return savedTheme;
   }
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
 };
 
 // Set theme on page load
 const setTheme = (theme) => {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
-  
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+
   // Update button text
-  themeToggle.textContent = theme === 'dark' ? '☀️ Light Mode' : '🌙 Darkkk Mode';
+  themeToggle.textContent =
+    theme === "dark" ? "☀️ Light Mode" : "🌙 Darkkk Mode";
 };
 
 // Initialize theme
 setTheme(getPreferredTheme());
 
 // Toggle theme on button click
-themeToggle.addEventListener('click', () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+themeToggle.addEventListener("click", () => {
+  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
   setTheme(newTheme);
 });
