@@ -1,6 +1,8 @@
 const countriesList = document.getElementById("countriesList");
 const cardImgTop = document.getElementById("cardImgTop");
 const filterRegion = document.getElementById("filterRegion");
+const searchCountry = document.getElementById("searchCountry");
+const searchInput = document.getElementById('searchCountry');
 //  const contries;
  const data = [];
 
@@ -122,3 +124,9 @@ filterRegion.addEventListener("change" , (event) =>{
   console.log("redionValue>>> ", regionValue)
   displayCountries(regionValue);
 });
+
+searchCountry.addEventListener("change", (event)=>{
+  const searchValue = searchInput.value.toLowerCase();
+  const isSearchMatch = country.name.toLowerCase().includes(searchValue);
+
+})
