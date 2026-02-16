@@ -121,12 +121,17 @@ filterRegion.addEventListener("change" , (event) =>{
   if (selected === "" || selected === "all") return true; 
   return cont.region?.toLowerCase() === selected;
 });
-  console.log("redionValue>>> ", regionValue)
+  // console.log("redionValue>>> ", regionValue)
   displayCountries(regionValue);
 });
 
-searchCountry.addEventListener("change", (event)=>{
-  const searchValue = searchInput.value.toLowerCase();
-  const isSearchMatch = country.name.toLowerCase().includes(searchValue);
 
-})
+searchCountry.addEventListener("keyup", (event) => {
+        const searchValue =searchCountry.value.trim();
+        // const searchValue2 =searchCountry.innerHTML.trim();
+        console.log("--------",  searchValue);
+        const filtered = data.filter(country => country.name.common.toLowerCase().includes(searchValue.toLowerCase()));
+        console.log("======", filtered)
+        // const filtered2 = data.filter((cont) => { const entered = event.target.value.toLowerCase().includes(searchValue2.toLowerCase()));
+        displayCountries(filtered);
+    });
