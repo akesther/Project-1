@@ -30,10 +30,7 @@ async function handleRequest() {
     } else if (contries.status == 404) {
     } else {
       const countriesJson = await contries.json();
-      // console.log(countriesJson);
-      // console.log(contries.status);
-      // console.log(contries.statusText);
-      // console.log(contries.type.length);
+      
       data.push(...countriesJson)
       displayCountries(countriesJson);
     }
@@ -55,10 +52,6 @@ function displayCountries(countries) {
     const option = document.createElement("option");
     div.classList.add("col-md-3", "mb-4"); // This ensures the cards will be responsive with 4 columns
 
-    // Create the card HTML structure
-    //  <a href="./country/${country.name.common.toLowerCase().replace(/\s+/g, '-')}" ></a>
-    //  <a href="./country/${country.name.common.toLowerCase().replace(/\s+/g, '-')}" >
-    //  <a href="./country/country.html?name=${encodeURIComponent(country.name.common)}" >
     div.innerHTML = `
             <div class="card">
             <a href="./country/country.html?name=${encodeURIComponent(country.name.common)}" >
