@@ -1,6 +1,8 @@
 const countriesList = document.getElementById("countriesList");
 const cardImgTop = document.getElementById("cardImgTop");
 const filterRegion = document.getElementById("filterRegion");
+//  const contries;
+ const data = [];
 
 export class NetworkError extends Error {
   //  class NetworkError extends Error {
@@ -20,7 +22,7 @@ export class DataError extends Error {
 
 async function handleRequest() {
   try {
-    const contries = await fetch(
+     const contries = await fetch(
       "https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital",
     );
     if (!contries.ok) {
@@ -28,10 +30,11 @@ async function handleRequest() {
     } else if (contries.status == 404) {
     } else {
       const countriesJson = await contries.json();
-      console.log(countriesJson);
-      console.log(contries.status);
-      console.log(contries.statusText);
-      console.log(contries.type.length);
+      // console.log(countriesJson);
+      // console.log(contries.status);
+      // console.log(contries.statusText);
+      // console.log(contries.type.length);
+      data.push(...countriesJson)
       displayCountries(countriesJson);
     }
   } catch (error) {
@@ -41,7 +44,10 @@ async function handleRequest() {
 handleRequest();
 
 function displayCountries(countries) {
+
   const countriesGrid = document.getElementById("countriesGrid"); // Define where to append the grid items
+
+  countriesGrid.innerHTML ="";
 
   countries.forEach((country) => {
     // Create the card container
@@ -68,9 +74,11 @@ function displayCountries(countries) {
 
     // option.innerHTML = `<option >${country.region}</option>`;
 
-    // Append the created card to the grid
     countriesGrid.appendChild(div);
+
     filterRegion.appendChild(option);
+
+
   });
 
   countries.forEach((element) => {
@@ -109,4 +117,15 @@ themeToggle.addEventListener("click", () => {
   const currentTheme = document.documentElement.getAttribute("data-theme");
   const newTheme = currentTheme === "dark" ? "light" : "dark";
   setTheme(newTheme);
+});
+
+filterRegion.addEventListener("change" , (event) =>{
+  console.log(data[0].region);
+  // const redionValue = data.filter((cont)=>cont.region.toLowerCase()===event.target.value.toLowerCase() );
+  const regionValue = data.filter((cont) => { const selected = event.target.value.toLowerCase();
+  if (selected === "" || selected === "all") return true; 
+  return cont.region?.toLowerCase() === selected;
+});
+  console.log("redionValue>>> ", regionValue)
+  displayCountries(regionValue);
 });
