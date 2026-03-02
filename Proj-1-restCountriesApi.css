@@ -140,8 +140,9 @@ img {
 [data-theme="dark"] {
   --bg-color: rgb(112, 121, 129);
   --text-color: rgb(255, 255, 255);
-  --card-bg: rgb(111, 109, 109);
-  --border-color: #444444;
+  /* --card-bg: rgb(111, 109, 109); */
+  --card-bg: rgb(112, 121, 129);
+  /* --border-color: #444444; */
   .card {
     color: white;
   }
