@@ -8,7 +8,11 @@ The Proj-1-restCountriesApi.htl file is the
 
 
 https://app.netlify.com/projects/inquisitive-beijinho-c58bca/configuration/general#project-details
-
 https://inquisitive-beijinho-c58bca.netlify.app
+
+
+
+https://akesther.github.io/Project-1/
+
 
 
